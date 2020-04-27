@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\..\..\..\..\Downloads\db4o-8.0\bin\net-4.0\Db4objects.Db4o.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -259,6 +262,37 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides-12\Clientes.cs" />
+    <Compile Include="Slides-12\ListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-12\ListaUsuarios.Designer.cs">
+      <DependentUpon>ListaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides-12\PesquisaMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-12\PesquisaMes.Designer.cs">
+      <DependentUpon>PesquisaMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides-12\SalarioSexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-12\SalarioSexo.Designer.cs">
+      <DependentUpon>SalarioSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides-12\SalarioTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-12\SalarioTotal.Designer.cs">
+      <DependentUpon>SalarioTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides-12\Slide12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-12\Slide12.Designer.cs">
+      <DependentUpon>Slide12.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Exercicios\Exercicio1.resx">
       <DependentUpon>Exercicio1.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +408,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Slides-12\ListaUsuarios.resx">
+      <DependentUpon>ListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides-12\PesquisaMes.resx">
+      <DependentUpon>PesquisaMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides-12\SalarioSexo.resx">
+      <DependentUpon>SalarioSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides-12\SalarioTotal.resx">
+      <DependentUpon>SalarioTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides-12\Slide12.resx">
+      <DependentUpon>Slide12.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -397,10 +446,7 @@
     <None Include="Resources\dado.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Slide12\Exercicio-slide12\Slide12.csproj">
-      <Project>{35c9cb7a-8fe1-43c7-94e2-00486e611b40}</Project>
-      <Name>Slide12</Name>
-    </ProjectReference>
+    <Folder Include="Slides-13\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

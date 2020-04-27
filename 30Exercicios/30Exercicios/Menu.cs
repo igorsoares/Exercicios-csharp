@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Exercicio_slide12;
 using _30Exercicios.Exercicios;
+using _30Exercicios.Slides;
 
 namespace _30Exercicios
 {
@@ -177,8 +177,8 @@ namespace _30Exercicios
 
         private void btSlide12_Click(object sender, EventArgs e)
         {
-            CadastroP form = new CadastroP();
-            form.ShowDialog();
+            Slide12 slide = new Slide12();
+            slide.Show();
         }
     }
 }
