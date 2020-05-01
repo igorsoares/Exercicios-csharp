@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using _30Exercicios.Exercicios;
 using _30Exercicios.Slides;
+using _30Exercicios.Slides_13;
 
 namespace _30Exercicios
 {
@@ -179,6 +180,13 @@ namespace _30Exercicios
         {
             Slide12 slide = new Slide12();
             slide.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Slide13 obj = new Slide13();
+            obj.ShowDialog();
+
         }
     }
 }

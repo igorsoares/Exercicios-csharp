@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericExercicio = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btSlide12 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btSlide12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericExercicio)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,17 @@
             this.panel3.Size = new System.Drawing.Size(561, 285);
             this.panel3.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(291, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Exercício Slide 13";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btSlide12
             // 
             this.btSlide12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,16 +118,6 @@
             this.btSlide12.Text = "Exercício Slide 12";
             this.btSlide12.UseVisualStyleBackColor = true;
             this.btSlide12.Click += new System.EventHandler(this.btSlide12_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(291, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Exercício Slide 13";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 

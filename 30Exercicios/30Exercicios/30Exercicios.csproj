@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContaFormComObjeto.cs" />
     <Compile Include="Exercicios\Exercicio1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +294,19 @@
     <Compile Include="Slides-12\Slide12.Designer.cs">
       <DependentUpon>Slide12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Slides-13\Conta.cs" />
+    <Compile Include="Slides-13\Slide13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-13\Slide13.Designer.cs">
+      <DependentUpon>Slide13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides-13\VisualizarBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slides-13\VisualizarBanco.Designer.cs">
+      <DependentUpon>VisualizarBanco.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Exercicios\Exercicio1.resx">
       <DependentUpon>Exercicio1.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +437,12 @@
     <EmbeddedResource Include="Slides-12\Slide12.resx">
       <DependentUpon>Slide12.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Slides-13\Slide13.resx">
+      <DependentUpon>Slide13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides-13\VisualizarBanco.resx">
+      <DependentUpon>VisualizarBanco.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -445,8 +465,6 @@
   <ItemGroup>
     <None Include="Resources\dado.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Slides-13\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
