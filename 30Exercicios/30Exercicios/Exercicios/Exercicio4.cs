@@ -22,8 +22,21 @@ namespace _30Exercicios
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            metros = Convert.ToInt32(tbMetros.Text);
-            tbCm.Text = (metros * 100).ToString();
+            try
+            {
+                metros = Convert.ToInt32(tbMetros.Text);
+                tbCm.Text = (metros * 100).ToString();
+            }catch(FormatException ex)
+            {
+                MessageBox.Show("Erro na conversão, digite apenas números", "" +
+                    "Erro");
+                return;
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            
         }
     }
 }

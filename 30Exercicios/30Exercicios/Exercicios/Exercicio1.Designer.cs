@@ -36,8 +36,8 @@
             this.tbGanhoH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tbSalarioT = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados";
             // 
+            // tbSalarioT
+            // 
+            this.tbSalarioT.Location = new System.Drawing.Point(15, 52);
+            this.tbSalarioT.Name = "tbSalarioT";
+            this.tbSalarioT.ReadOnly = true;
+            this.tbSalarioT.Size = new System.Drawing.Size(100, 20);
+            this.tbSalarioT.TabIndex = 1;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,14 +136,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Salário total";
             // 
-            // tbSalarioT
-            // 
-            this.tbSalarioT.Location = new System.Drawing.Point(15, 52);
-            this.tbSalarioT.Name = "tbSalarioT";
-            this.tbSalarioT.ReadOnly = true;
-            this.tbSalarioT.Size = new System.Drawing.Size(100, 20);
-            this.tbSalarioT.TabIndex = 1;
-            // 
             // Exercicio1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +144,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MinimizeBox = false;
             this.Name = "Exercicio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

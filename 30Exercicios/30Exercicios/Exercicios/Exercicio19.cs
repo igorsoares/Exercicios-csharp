@@ -19,8 +19,8 @@ namespace Exercicios
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            int i = 0, y = 1;
-            int resultado = 0;
+            double i = 0, y = 1;
+            double resultado = 0;
             for(int x=1; x<1000; x++)
             {
                 resultado = i + y;

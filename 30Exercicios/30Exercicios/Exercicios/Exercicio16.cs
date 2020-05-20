@@ -41,8 +41,14 @@ namespace Exercicios
                 tbUsuario.Focus();
                 return;
             }
+            else
+            {
+                MessageBox.Show("Bem vindo, " + tbUsuario.Text, "Aviso");
+                return;
+            }
 
-            MessageBox.Show("Bem vindo, " + tbUsuario.Text, "Aviso");
+
+            
             
         }
     }

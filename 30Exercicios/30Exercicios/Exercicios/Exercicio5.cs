@@ -21,8 +21,21 @@ namespace _30Exercicios
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            formula = (72.7*Convert.ToDouble(tbAltura.Text)) - 58;
-            tbPeso.Text = Math.Round(formula,2).ToString();
+            try
+            {
+                formula = (72.7 * Convert.ToDouble(tbAltura.Text)) - 58;
+                tbPeso.Text = Math.Round(formula, 2).ToString();
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Digite apenas números");
+                return;
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+                return;
+            }
+            
         }
     }
 }

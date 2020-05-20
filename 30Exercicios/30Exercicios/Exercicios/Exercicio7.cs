@@ -50,6 +50,10 @@ namespace _30Exercicios
             catch(FormatException ex)
             {
                 MessageBox.Show("Digite apenas números", "Aviso");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+                return;
             }
             
             

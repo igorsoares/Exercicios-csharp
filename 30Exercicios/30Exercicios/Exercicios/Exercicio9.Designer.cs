@@ -90,7 +90,9 @@
             this.Controls.Add(this.tbDigito);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio9";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercicio9";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -133,6 +133,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btCalcular);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercicio3";

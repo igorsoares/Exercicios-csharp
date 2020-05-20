@@ -39,8 +39,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(151, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(100, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 52);
+            this.label2.Location = new System.Drawing.Point(28, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
@@ -57,14 +58,14 @@
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(133, 52);
+            this.tbUsuario.Location = new System.Drawing.Point(78, 52);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(100, 20);
             this.tbUsuario.TabIndex = 2;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(133, 98);
+            this.tbPassword.Location = new System.Drawing.Point(78, 98);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
@@ -73,15 +74,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 98);
+            this.label3.Location = new System.Drawing.Point(28, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Usuario";
+            this.label3.Text = "Senha";
             // 
             // btLogin
             // 
-            this.btLogin.Location = new System.Drawing.Point(119, 154);
+            this.btLogin.Location = new System.Drawing.Point(54, 155);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(124, 23);
             this.btLogin.TabIndex = 5;
@@ -93,14 +94,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 216);
+            this.ClientSize = new System.Drawing.Size(237, 216);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio16";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercicio16";
             this.ResumeLayout(false);
             this.PerformLayout();

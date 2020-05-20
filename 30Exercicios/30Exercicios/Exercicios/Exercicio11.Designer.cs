@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbTotalD = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbSalarioL = new System.Windows.Forms.TextBox();
             this.tbSalarioBruto = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.btCalcular = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbTotalD = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,11 +65,28 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tbINSS);
-            this.groupBox1.Location = new System.Drawing.Point(109, 110);
+            this.groupBox1.Location = new System.Drawing.Point(39, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(221, 208);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
+            // 
+            // tbTotalD
+            // 
+            this.tbTotalD.Location = new System.Drawing.Point(127, 137);
+            this.tbTotalD.Name = "tbTotalD";
+            this.tbTotalD.ReadOnly = true;
+            this.tbTotalD.Size = new System.Drawing.Size(81, 20);
+            this.tbTotalD.TabIndex = 48;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 47;
+            this.label10.Text = "Total descontos";
             // 
             // label4
             // 
@@ -158,7 +175,7 @@
             // 
             // tbNumHora
             // 
-            this.tbNumHora.Location = new System.Drawing.Point(236, 84);
+            this.tbNumHora.Location = new System.Drawing.Point(166, 79);
             this.tbNumHora.Name = "tbNumHora";
             this.tbNumHora.Size = new System.Drawing.Size(81, 20);
             this.tbNumHora.TabIndex = 53;
@@ -166,7 +183,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 84);
+            this.label3.Location = new System.Drawing.Point(39, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 13);
             this.label3.TabIndex = 52;
@@ -174,7 +191,7 @@
             // 
             // tbGanhoH
             // 
-            this.tbGanhoH.Location = new System.Drawing.Point(236, 44);
+            this.tbGanhoH.Location = new System.Drawing.Point(166, 39);
             this.tbGanhoH.Name = "tbGanhoH";
             this.tbGanhoH.Size = new System.Drawing.Size(81, 20);
             this.tbGanhoH.TabIndex = 51;
@@ -182,7 +199,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 44);
+            this.label2.Location = new System.Drawing.Point(39, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 50;
@@ -190,9 +207,9 @@
             // 
             // btCalcular
             // 
-            this.btCalcular.Location = new System.Drawing.Point(89, 333);
+            this.btCalcular.Location = new System.Drawing.Point(12, 319);
             this.btCalcular.Name = "btCalcular";
-            this.btCalcular.Size = new System.Drawing.Size(282, 23);
+            this.btCalcular.Size = new System.Drawing.Size(285, 23);
             this.btCalcular.TabIndex = 49;
             this.btCalcular.Text = "Calcular";
             this.btCalcular.UseVisualStyleBackColor = true;
@@ -211,35 +228,19 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(184, 9);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Maroon;
+            this.label9.Location = new System.Drawing.Point(115, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 55;
             this.label9.Text = "Exercicio 11";
             // 
-            // tbTotalD
-            // 
-            this.tbTotalD.Location = new System.Drawing.Point(127, 137);
-            this.tbTotalD.Name = "tbTotalD";
-            this.tbTotalD.ReadOnly = true;
-            this.tbTotalD.Size = new System.Drawing.Size(81, 20);
-            this.tbTotalD.TabIndex = 48;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
-            this.label10.TabIndex = 47;
-            this.label10.Text = "Total descontos";
-            // 
             // Exercicio11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 371);
+            this.ClientSize = new System.Drawing.Size(309, 371);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbNumHora);
@@ -248,7 +249,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btCalcular);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio11";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercicio11";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

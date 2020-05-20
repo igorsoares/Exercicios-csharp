@@ -21,9 +21,22 @@ namespace _30Exercicios
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            tbArea.Text = "";
-            area = pi * Math.Pow(Convert.ToDouble(tbRaio.Text),2);
-            tbArea.Text = area.ToString("N2");
+            try
+            {
+                tbArea.Text = "";
+                area = pi * Math.Pow(Convert.ToDouble(tbRaio.Text), 2);
+                tbArea.Text = area.ToString("N2");
+            }catch(FormatException ex)
+            {
+                MessageBox.Show("Digite apenas números", "Erro");
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+                return;
+            }
+
         }
     }
 }

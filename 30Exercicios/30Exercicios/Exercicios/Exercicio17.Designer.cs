@@ -90,6 +90,7 @@
             this.Controls.Add(this.tbNumero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio17";
             this.Text = "Exercicio17";
             this.ResumeLayout(false);

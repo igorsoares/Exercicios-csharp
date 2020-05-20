@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbMetros = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tb18L = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tb3L = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btCalcular = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbQuantGalao = new System.Windows.Forms.TextBox();
             this.tbQuantLata = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb3L = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb18L = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbMetros = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,21 +69,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // tbMetros
+            // btCalcular
             // 
-            this.tbMetros.Location = new System.Drawing.Point(122, 42);
-            this.tbMetros.Name = "tbMetros";
-            this.tbMetros.Size = new System.Drawing.Size(100, 20);
-            this.tbMetros.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tamanho em m²";
+            this.btCalcular.Location = new System.Drawing.Point(210, 25);
+            this.btCalcular.Name = "btCalcular";
+            this.btCalcular.Size = new System.Drawing.Size(85, 23);
+            this.btCalcular.TabIndex = 3;
+            this.btCalcular.Text = "Calcular";
+            this.btCalcular.UseVisualStyleBackColor = true;
+            this.btCalcular.Click += new System.EventHandler(this.btCalcular_Click);
             // 
             // groupBox2
             // 
@@ -100,59 +94,6 @@
             this.groupBox2.Size = new System.Drawing.Size(268, 103);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // tb18L
-            // 
-            this.tb18L.Location = new System.Drawing.Point(171, 39);
-            this.tb18L.Name = "tb18L";
-            this.tb18L.ReadOnly = true;
-            this.tb18L.Size = new System.Drawing.Size(59, 20);
-            this.tb18L.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Latas 18L";
-            // 
-            // tb3L
-            // 
-            this.tb3L.Location = new System.Drawing.Point(171, 65);
-            this.tb3L.Name = "tb3L";
-            this.tb3L.ReadOnly = true;
-            this.tb3L.Size = new System.Drawing.Size(59, 20);
-            this.tb3L.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Galões 3,5L";
-            // 
-            // btCalcular
-            // 
-            this.btCalcular.Location = new System.Drawing.Point(228, 40);
-            this.btCalcular.Name = "btCalcular";
-            this.btCalcular.Size = new System.Drawing.Size(67, 23);
-            this.btCalcular.TabIndex = 3;
-            this.btCalcular.Text = "Calcular";
-            this.btCalcular.UseVisualStyleBackColor = true;
-            this.btCalcular.Click += new System.EventHandler(this.btCalcular_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(187, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "R$";
             // 
             // label3
             // 
@@ -179,6 +120,65 @@
             this.tbQuantLata.Size = new System.Drawing.Size(59, 20);
             this.tbQuantLata.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(187, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "R$";
+            // 
+            // tb3L
+            // 
+            this.tb3L.Location = new System.Drawing.Point(171, 65);
+            this.tb3L.Name = "tb3L";
+            this.tb3L.ReadOnly = true;
+            this.tb3L.Size = new System.Drawing.Size(59, 20);
+            this.tb3L.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Galões 3,5L";
+            // 
+            // tb18L
+            // 
+            this.tb18L.Location = new System.Drawing.Point(171, 39);
+            this.tb18L.Name = "tb18L";
+            this.tb18L.ReadOnly = true;
+            this.tb18L.Size = new System.Drawing.Size(59, 20);
+            this.tb18L.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Latas 18L";
+            // 
+            // tbMetros
+            // 
+            this.tbMetros.Location = new System.Drawing.Point(104, 27);
+            this.tbMetros.Name = "tbMetros";
+            this.tbMetros.Size = new System.Drawing.Size(100, 20);
+            this.tbMetros.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tamanho em m²";
+            // 
             // Exercicio8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +186,7 @@
             this.ClientSize = new System.Drawing.Size(339, 246);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Exercicio8";

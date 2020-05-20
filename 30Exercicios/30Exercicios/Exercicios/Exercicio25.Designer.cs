@@ -101,7 +101,7 @@
             this.ClientSize = new System.Drawing.Size(408, 197);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Exercicio25";

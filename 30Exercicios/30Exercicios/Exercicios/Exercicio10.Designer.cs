@@ -38,17 +38,17 @@
             // 
             // tbDigitado
             // 
-            this.tbDigitado.Location = new System.Drawing.Point(67, 139);
+            this.tbDigitado.Location = new System.Drawing.Point(12, 139);
             this.tbDigitado.Name = "tbDigitado";
             this.tbDigitado.ReadOnly = true;
-            this.tbDigitado.Size = new System.Drawing.Size(100, 20);
+            this.tbDigitado.Size = new System.Drawing.Size(198, 20);
             this.tbDigitado.TabIndex = 44;
             // 
             // btProcessar
             // 
-            this.btProcessar.Location = new System.Drawing.Point(49, 180);
+            this.btProcessar.Location = new System.Drawing.Point(12, 180);
             this.btProcessar.Name = "btProcessar";
-            this.btProcessar.Size = new System.Drawing.Size(131, 23);
+            this.btProcessar.Size = new System.Drawing.Size(198, 23);
             this.btProcessar.TabIndex = 43;
             this.btProcessar.Text = "Processar";
             this.btProcessar.UseVisualStyleBackColor = true;
@@ -73,7 +73,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(69, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 20);
@@ -100,7 +101,9 @@
             this.Controls.Add(this.tbDigito);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exercicio10";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercicio10";
             this.ResumeLayout(false);
             this.PerformLayout();
