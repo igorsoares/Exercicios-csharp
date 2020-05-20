@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,16 +42,17 @@ namespace _30Exercicios.Slides_13
         }
 
 
-        private bool ContaExiste(Conta obj)
+        private int ContaExiste(Conta obj)
         {
+
             IObjectSet retorno = banco.QueryByExample(obj);
             if (retorno.HasNext())
             {
-                return false; // conta existe
+                return 1; // conta existe
             }
             else
             {
-                return true; // conta nao existe
+                return 2; // conta n existe
             }
         }
 
@@ -73,11 +75,14 @@ namespace _30Exercicios.Slides_13
             obj.titular = tbTitular.Text;
             obj.numero = Convert.ToInt32(tbNumero.Text);
             decimal valorDigitado = Convert.ToDecimal(tbValor.Text);
-            if (ContaExiste(obj))
+            if (ContaExiste(obj) == 2)
             {
                 obj.valor = valorDigitado;
+                obj.metodo = "Depósito";
+                obj.digitado = obj.valor;
                 banco.Store(obj);
                 MessageBox.Show("Conta criada com sucesso !","Aviso");
+                tbSaldo.Text = valorDigitado.ToString();
             }
             else
             {
@@ -88,12 +93,14 @@ namespace _30Exercicios.Slides_13
                 {
                     obj = (Conta)retorno.Next();
                     obj.valor += valorDigitado;
-                    tbSaldo.Text = obj.valor.ToString();
-                    tmp.titular = obj.titular;
-                    tmp.numero = obj.numero;
-                    tmp.valor = obj.valor;
                     
                 }
+                tbSaldo.Text = obj.valor.ToString();
+                tmp.titular = obj.titular;
+                tmp.numero = obj.numero;
+                tmp.valor = obj.valor;
+                tmp.metodo = "Depósito";
+                tmp.digitado = valorDigitado;
                 banco.Store(tmp);
 
             }
@@ -103,7 +110,7 @@ namespace _30Exercicios.Slides_13
 
         private void visualizarBancoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            VisualizarBanco obj = new VisualizarBanco(banco);
+            VisualizarBanco obj = new VisualizarBanco(banco,tbTitular.Text,tbNumero.Text);
             obj.ShowDialog();
         }
 
@@ -116,36 +123,89 @@ namespace _30Exercicios.Slides_13
         private void btSaca_Click(object sender, EventArgs e)
         {
             VerificaCampos();
-
-            Conta obj = new Conta();
-            obj.titular = tbTitular.Text;
-            obj.numero = Convert.ToInt32(tbNumero.Text);
-            decimal valorDigitado = Convert.ToDecimal(tbValor.Text);
-            if (ContaExiste(obj))
+            try
             {
-                obj.valor = valorDigitado;
-                banco.Store(obj);
-                MessageBox.Show("Conta criada com sucesso !", "Aviso");
+                Conta obj = new Conta();
+                obj.titular = tbTitular.Text;
+                obj.numero = Convert.ToInt32(tbNumero.Text);
+                decimal valorDigitado = Convert.ToDecimal(tbValor.Text);
+                if (ContaExiste(obj) == 1)
+                {
+                    decimal valor_conta = 0;
+                    IObjectSet retorno = banco.QueryByExample(obj);
+                    Conta tmp = new Conta();
+                    ArrayList valores_tmp = new ArrayList();
+                    while (retorno.HasNext())
+                    {
+                        obj = (Conta)retorno.Next();
+                        valores_tmp.Add(obj.valor);
+                    }
+                    valor_conta = Convert.ToDecimal(valores_tmp[valores_tmp.Count - 1]) - valorDigitado;
+                    obj.valor = valor_conta;
+                    tbSaldo.Text = valor_conta.ToString();
+                    tmp.titular = obj.titular;
+                    tmp.numero = obj.numero;
+                    tmp.valor = obj.valor;
+                    tmp.metodo = "Saque";
+                    tmp.digitado = valorDigitado;
+                    banco.Store(tmp);
+                }
+                else
+                {
+                    obj.valor = valorDigitado;
+                    obj.metodo = "Saque";
+                    obj.digitado = obj.valor;
+                    banco.Store(obj);
+                    MessageBox.Show("Conta criada com sucesso !", "Aviso");
+                    tbSaldo.Text = valorDigitado.ToString();
+                }
+               
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
             }
-            else
+            
+
+            }
+
+        private void btExclui_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbTitular.Text))
             {
-                decimal valor_conta=0;
-                IObjectSet retorno = banco.QueryByExample(obj);
+                MessageBox.Show("Nome é obrigatório !", "Erro");
+                tbTitular.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(tbNumero.Text))
+            {
+                MessageBox.Show("Número é obrigatório !", "Erro");
+                tbNumero.Focus();
+                return;
+            }
+
+            try
+            {
+                string titular = tbTitular.Text;
+                int numero = Convert.ToInt32(tbNumero.Text);
+
                 Conta tmp = new Conta();
+                tmp.titular = titular;
+                tmp.numero = numero;
+
+                IObjectSet retorno = banco.QueryByExample(tmp);
                 while (retorno.HasNext())
                 {
-                    obj = (Conta)retorno.Next();
-                    valor_conta += obj.valor;   
+                    Conta tmp2 = (Conta)retorno.Next();
+                    banco.Delete(tmp2);
                 }
-                valor_conta -= valorDigitado;
-                obj.valor = valor_conta;
-                tbSaldo.Text = valor_conta.ToString();
-                tmp.titular = obj.titular;
-                tmp.numero = obj.numero;
-                tmp.valor = obj.valor;
-                banco.Store(tmp);
-
+                MessageBox.Show("Conta removida !");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
             }
+            
 
 
 

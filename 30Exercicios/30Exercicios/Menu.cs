@@ -60,10 +60,10 @@ namespace _30Exercicios
                     Exercicio7 ex7 = new Exercicio7();
                     ex7.ShowDialog();
                     break;
-                //case "8":
-                //    Exercicio7 ex7 = new Exercicio7();
-                //    ex7.ShowDialog();
-                //    break;
+                case "8":
+                    Exercicio8 ex8 = new Exercicio8();
+                    ex8.ShowDialog();
+                    break;
                 case "9":
                     Exercicio9 ex9 = new Exercicio9();
                     ex9.ShowDialog();

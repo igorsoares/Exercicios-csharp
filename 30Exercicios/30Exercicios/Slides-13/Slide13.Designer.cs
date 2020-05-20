@@ -39,7 +39,6 @@
             this.btDeposita = new System.Windows.Forms.Button();
             this.btSaca = new System.Windows.Forms.Button();
             this.btExclui = new System.Windows.Forms.Button();
-            this.btHistorico = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.visualizarBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +115,7 @@
             // 
             // btDeposita
             // 
-            this.btDeposita.Location = new System.Drawing.Point(178, 31);
+            this.btDeposita.Location = new System.Drawing.Point(178, 42);
             this.btDeposita.Name = "btDeposita";
             this.btDeposita.Size = new System.Drawing.Size(82, 23);
             this.btDeposita.TabIndex = 8;
@@ -126,7 +125,7 @@
             // 
             // btSaca
             // 
-            this.btSaca.Location = new System.Drawing.Point(178, 60);
+            this.btSaca.Location = new System.Drawing.Point(178, 71);
             this.btSaca.Name = "btSaca";
             this.btSaca.Size = new System.Drawing.Size(82, 23);
             this.btSaca.TabIndex = 9;
@@ -136,21 +135,13 @@
             // 
             // btExclui
             // 
-            this.btExclui.Location = new System.Drawing.Point(178, 89);
+            this.btExclui.Location = new System.Drawing.Point(178, 100);
             this.btExclui.Name = "btExclui";
             this.btExclui.Size = new System.Drawing.Size(82, 23);
             this.btExclui.TabIndex = 10;
             this.btExclui.Text = "Excluir";
             this.btExclui.UseVisualStyleBackColor = true;
-            // 
-            // btHistorico
-            // 
-            this.btHistorico.Location = new System.Drawing.Point(178, 120);
-            this.btHistorico.Name = "btHistorico";
-            this.btHistorico.Size = new System.Drawing.Size(82, 23);
-            this.btHistorico.TabIndex = 11;
-            this.btHistorico.Text = "Historico";
-            this.btHistorico.UseVisualStyleBackColor = true;
+            this.btExclui.Click += new System.EventHandler(this.btExclui_Click);
             // 
             // groupBox1
             // 
@@ -162,7 +153,7 @@
             this.groupBox1.Controls.Add(this.tbSaldo);
             this.groupBox1.Controls.Add(this.tbValor);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(160, 142);
             this.groupBox1.TabIndex = 12;
@@ -191,12 +182,12 @@
             // 
             this.visualizarBancoToolStripMenuItem1.Name = "visualizarBancoToolStripMenuItem1";
             this.visualizarBancoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.visualizarBancoToolStripMenuItem1.Text = "Visualizar banco";
+            this.visualizarBancoToolStripMenuItem1.Text = "Visualizar histórico";
             this.visualizarBancoToolStripMenuItem1.Click += new System.EventHandler(this.visualizarBancoToolStripMenuItem1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(178, 149);
+            this.button1.Location = new System.Drawing.Point(178, 129);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
             this.button1.TabIndex = 14;
@@ -208,10 +199,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 175);
+            this.ClientSize = new System.Drawing.Size(276, 180);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btHistorico);
             this.Controls.Add(this.btExclui);
             this.Controls.Add(this.btSaca);
             this.Controls.Add(this.btDeposita);
@@ -244,7 +234,6 @@
         private System.Windows.Forms.Button btDeposita;
         private System.Windows.Forms.Button btSaca;
         private System.Windows.Forms.Button btExclui;
-        private System.Windows.Forms.Button btHistorico;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem visualizarBancoToolStripMenuItem;

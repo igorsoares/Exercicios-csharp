@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContaFormComObjeto.cs" />
     <Compile Include="Exercicios\Exercicio1.cs">
       <SubType>Form</SubType>
     </Compile>

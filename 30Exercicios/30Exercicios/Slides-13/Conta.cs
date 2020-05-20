@@ -11,5 +11,8 @@ namespace _30Exercicios.Slides_13
         public string titular { get; set; }
         public int numero { get; set; }
         public decimal valor { get; set; }
+        public string metodo { get; set; } // sacou / depositou
+        public decimal digitado { get; set; }
+
     }
 }

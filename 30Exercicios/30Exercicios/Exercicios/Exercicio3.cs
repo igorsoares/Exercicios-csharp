@@ -21,9 +21,23 @@ namespace _30Exercicios
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            area = Math.Pow(Convert.ToDouble(tbLado.Text),2);
-            tbArea.Text = area.ToString();
-            tbAreaD.Text = (Convert.ToDouble(tbArea.Text) * 2).ToString();
+            try
+            {
+                if (String.IsNullOrEmpty(tbLado.Text))
+                {
+                    MessageBox.Show("Campo de lado é obrigatório");
+                    return;
+                } 
+                area = Math.Pow(Convert.ToDouble(tbLado.Text), 2);
+                tbArea.Text = area.ToString();
+                tbAreaD.Text = (Convert.ToDouble(tbArea.Text) * 2).ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Erro");
+                return;
+            }
+            
         }
     }
 }

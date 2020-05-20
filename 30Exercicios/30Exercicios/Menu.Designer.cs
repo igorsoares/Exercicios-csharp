@@ -63,7 +63,7 @@
             // numericExercicio
             // 
             this.numericExercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericExercicio.Location = new System.Drawing.Point(225, 107);
+            this.numericExercicio.Location = new System.Drawing.Point(217, 107);
             this.numericExercicio.Maximum = new decimal(new int[] {
             35,
             0,
