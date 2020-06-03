@@ -29,13 +29,13 @@ namespace _30Exercicios
             //tbVala.Text = "";
             //tbValb.Text = "";
             //tbValc.Text = "";
-            int a, b, c;
+            double a, b, c;
             
             try
             {
-                a = Convert.ToInt32(tbVala.Text);
-                b = Convert.ToInt32(tbValb.Text);
-                c = Convert.ToInt32(tbValc.Text);
+                a = Convert.ToDouble(tbVala.Text);
+                b = Convert.ToDouble(tbValb.Text);
+                c = Convert.ToDouble(tbValc.Text);
 
                 if (a == 0)
                 {
@@ -62,14 +62,18 @@ namespace _30Exercicios
                 tbDelta.Text = delta.ToString();
                 double x;
                 x = ( (-b) + Math.Sqrt(delta)) / 2 * a;
-                tbX1.Text = x.ToString();
+                tbX1.Text = x.ToString("F2");
 
                 x = ((-b) - Math.Sqrt(delta)) / 2 * a;
-                tbX2.Text = x.ToString();
+                tbX2.Text = x.ToString("F2");
+
+                double xV = (-b / 2 * a);
+                double yV = (-delta) / ( 4 * a);
+                tbxV.Text = xV.ToString("F2");
+                tbyV.Text = yV.ToString("F2");
 
 
-
-
+                
 
             }
             catch(FormatException ex)

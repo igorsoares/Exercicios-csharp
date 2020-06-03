@@ -42,6 +42,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbDelta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbxV = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbyV = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -105,9 +109,9 @@
             // 
             // btSegundograu
             // 
-            this.btSegundograu.Location = new System.Drawing.Point(15, 141);
+            this.btSegundograu.Location = new System.Drawing.Point(15, 136);
             this.btSegundograu.Name = "btSegundograu";
-            this.btSegundograu.Size = new System.Drawing.Size(412, 23);
+            this.btSegundograu.Size = new System.Drawing.Size(175, 23);
             this.btSegundograu.TabIndex = 7;
             this.btSegundograu.Text = "Calcular segundo grau";
             this.btSegundograu.UseVisualStyleBackColor = true;
@@ -132,7 +136,7 @@
             // 
             // tbX2
             // 
-            this.tbX2.Location = new System.Drawing.Point(302, 101);
+            this.tbX2.Location = new System.Drawing.Point(302, 93);
             this.tbX2.Name = "tbX2";
             this.tbX2.ReadOnly = true;
             this.tbX2.Size = new System.Drawing.Size(59, 20);
@@ -141,7 +145,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(258, 104);
+            this.label6.Location = new System.Drawing.Point(258, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 10;
@@ -164,11 +168,49 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Delta";
             // 
+            // tbxV
+            // 
+            this.tbxV.Location = new System.Drawing.Point(302, 122);
+            this.tbxV.Name = "tbxV";
+            this.tbxV.ReadOnly = true;
+            this.tbxV.Size = new System.Drawing.Size(59, 20);
+            this.tbxV.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(258, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "xV:";
+            // 
+            // tbyV
+            // 
+            this.tbyV.Location = new System.Drawing.Point(302, 154);
+            this.tbyV.Name = "tbyV";
+            this.tbyV.ReadOnly = true;
+            this.tbyV.Size = new System.Drawing.Size(59, 20);
+            this.tbyV.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(258, 157);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "yV:";
+            // 
             // Exercicio13
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 176);
+            this.ClientSize = new System.Drawing.Size(439, 195);
+            this.Controls.Add(this.tbyV);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tbxV);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tbDelta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbX2);
@@ -209,5 +251,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbDelta;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbxV;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbyV;
+        private System.Windows.Forms.Label label9;
     }
 }
