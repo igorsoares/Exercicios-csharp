@@ -1,2 +1,2 @@
-# learning-csharp
- i'm learning csharp and here has some exercises
+# 30 Exercises
+ i'm learning csharp and here has some exercises.
